@@ -135,9 +135,6 @@ df['Hospital Ownership'] = df['Hospital Ownership'].str.title()
 # Clean rating columns (convert to numeric)
 df['Hospital overall rating'] = pd.to_numeric(df['Hospital overall rating'], errors='coerce')
 
-#Droping column if its all null
-if df["Meets criteria for meaningful use of EHRs"].isnull().all():
-    df.drop(columns=["Meets criteria for meaningful use of EHRs"], inplace=True)
 
 """                                      EDA
 
